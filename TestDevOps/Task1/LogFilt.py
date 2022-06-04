@@ -14,5 +14,9 @@ for i in file_content:
     if "10.1.192.38" in i:
         sid = GetSID(i)
         SIDs.append(sid[2:len(sid)-1])
-print(sorted(SIDs))
+        
+c=1
+for i in sorted(SIDs):
+    print(f"{c}. {i}")
+    c+=1
 filesrc.close()
